@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script language="javascript" type="text/javascript" src="head.txt"></script>
+  <script src="data.json"></script>
+
+</head>
+
+<body id="destination" class="container">
+  <script language="javascript" type="text/javascript" src="header.txt"></script>
+  <section id="destination-content" class="content-width">
+    <h4 class="heading">  01 Pick your destination</h4>
+    <ul class="destination-list">
+      <li class="planet-item" id="default" onclick="openPlanet(event, 'moon')"><a href="#moon">moon</a></li>
+      <li class="planet-item" onclick="openPlanet(event, 'mars')"><a href="#mars">mars</a></li>
+      <li class="planet-item" onclick="openPlanet(event, 'europa')"><a href="#europa">europa</a></li>
+      <li class="planet-item" onclick="openPlanet(event, 'titan')"><a href="#titan">titan</a></li>
+    </ul>
+    <div class="planet-info">
+      <div class="destination-name" id="moon">
+        <div class="destination-img">
+          <img class="destination-img_" src="" alt="">
+        </div>
+        <div class="destination-description">
+          <h1 class="name"></h1>
+          <p class="destination"></p>
+
+          <div class="planet-meta">
+            <div class="distance">
+              <p>Avg. distance</p>
+              <span class="distance_"></span>
+            </div>
+            <div class="time">
+              <p>Est. travel time</p>
+              <span class="time_"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="destination-name" id="mars">
+        <div class="destination-img">
+          <img class="destination-img_" src="" alt="">
+        </div>
+        <div class="destination-description">
+          <h1 class="name"></h1>
+          <p class="destination"></p>
+
+          <div class="planet-meta">
+            <div class="distance">
+              <p>Avg. distance</p>
+              <span class="distance_"></span>
+            </div>
+            <div class="time">
+              <p>Est. travel time</p>
+              <span class="time_"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="destination-name" id="europa">
+        <div class="destination-img">
+          <img class="destination-img_" src="" alt="">
+        </div>
+        <div class="destination-description">
+          <h1 class="name"></h1>
+          <p class="destination"></p>
+
+          <div class="planet-meta">
+            <div class="distance">
+              <p>Avg. distance</p>
+              <span class="distance_"></span>
+            </div>
+            <div class="time">
+              <p>Est. travel time</p>
+              <span class="time_"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="destination-name" id="titan">
+        <div class="destination-img">
+          <img class="destination-img_" src="" alt="">
+        </div>
+        <div class="destination-description">
+          <h1 class="name"></h1>
+          <p class="destination"></p>
+
+          <div class="planet-meta">
+            <div class="distance">
+              <p>Avg. distance</p>
+              <span class="distance_"></span>
+            </div>
+            <div class="time">
+              <p>Est. travel time</p>
+              <span class="time_"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="myScript.js"></script>
+</body>
+
+
+</html>

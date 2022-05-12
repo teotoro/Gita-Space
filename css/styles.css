@@ -1,0 +1,723 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark: #0B0D17;
+    --white: #FFFFFF;
+    --light: #D0D6F9;
+    --basic: 'Barlow Condensed', sans-serif;
+    --heading: 'Bellefair', sans-serif;
+}
+
+html {
+    /* 62.5% of 16px base font size is 10px */
+    font-size: 62.5%;
+}
+
+body{
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--white);
+}
+
+h1{
+    font-size: 12rem;
+    font-family: var(--heading);
+    color: var(--white);
+}
+
+h2{
+    font-size: 6rem;
+}
+
+h3{
+    font-size: 4rem;
+}
+
+h4{
+    font-size: 2.5rem
+}
+
+h5{
+    font-size: 2rem;
+}
+
+
+p{
+    font-size: 1.8rem;
+    color: var(--light);
+    letter-spacing: .3rem;
+    line-height: 4rem;
+    padding-bottom: 2rem;
+    font-weight: 400;
+}
+
+.container{
+    max-width: 194rem;
+    padding:2rem 0;
+    margin: auto;
+}
+
+/* homepage */
+
+#homepage{    
+    background-image: url(../assets/home/background-home-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* header */
+
+.homepage-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--basic);
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    font-size: 2rem;
+    height: 10vmin;
+    padding-left: 2rem;
+
+}
+
+.header-logo{
+    max-width: 5rem;
+}
+
+.header-logo{
+    width: 100%;
+}
+
+.header-nav{
+    width: 60%;
+    background-color: #ffffff18;
+    backdrop-filter: blur(1.5rem);
+    border-radius: .2rem;
+    height: 100%;
+}
+
+.header-navbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.nav-item{
+    padding: 0 2rem;
+    height: 100%;
+}
+
+.nav-item a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--white);
+    height: 100%;
+    position: relative;
+    transition: all .2s;
+}
+
+.nav-item a:hover{
+    color: var(--light);
+    transition: all .2s;
+}
+
+.nav-item a:after{
+    content: "";
+    display: block;
+    height: .3rem;
+    background-color: var(--light);
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(0 .3rem);
+    transition: all .2s;
+}
+
+.nav-item a:hover:after{
+    width: 100%;
+    transform: translate(0 .3rem);
+    transition: all .2s;
+}
+
+.active::before{
+    content: "";
+    display: block;
+    height: .3rem;
+    background-color: rgba(255, 255, 255, 0.637);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(0 .3rem);
+    width: 100%;
+}
+
+/* homepage conent */
+
+.homepage-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10% 0;
+}
+
+.content-info>*{
+    padding-bottom: 20px;
+}
+
+.content-info{
+    max-width: 48rem;
+}
+
+.content-explore{
+    width: 28rem;
+    height: 28rem;
+    background-color: rgb(245, 247, 255);
+    border-radius: 50%;
+    position: relative;
+}
+
+.content-explore-link{
+    height: 100%;
+}
+
+.content-explore-link a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--basic);
+    color: var(--dark);
+    font-size: 3.5rem;
+    height: 100%;
+    transition: all 1s;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(circle, rgba(211,188,244,0.8080182756696428) 28%, rgba(47,82,142,1) 100%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: .6s ease;
+    opacity: .5;
+  }
+  .content-explore-link:hover .overlay {
+    transform: scale(1);
+    opacity: .4;
+  }
+
+  .content-explore-link:hover a{
+      transform:scale(1.3);
+  }
+
+/* destination page */
+#destination{
+    background-image: url('../assets/destination/background-destination-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.content-width{
+    padding:2rem;
+    max-width: 144rem;
+    margin: auto;
+}
+
+#destination-content{
+    position: relative;
+}
+
+.heading{
+    font-family: var(--heading);
+    letter-spacing: .5rem;
+    padding: 5rem 2rem 2rem;
+}
+
+.destination-list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 5rem;
+    position: absolute;
+    left:50%;
+    padding:0 2rem 0;
+}
+
+.planet-item{
+    padding: 0 2rem;
+    height: 100%;
+}
+
+.destination-list a{
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: var(--basic);
+    font-size: 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.planet-item a:after{
+    content: "";
+    display: block;
+    height: .3rem;
+    background-color: var(--light);
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(0 .3rem);
+    transition: all .2s;
+}
+
+.planet-item a:hover:after{
+    width: 100%;
+    transform: translate(0 .3rem);
+    transition: all .2s;
+}
+
+.active_ a{
+    color: var(--light);
+}
+
+.planet-info{
+    padding-top: 8rem;
+}
+
+.destination-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.destination-name>div{
+    width: 40%;
+}
+
+.destination-img img{
+    width: 100%;
+    margin: auto;
+}
+
+.planet-meta span{
+    display: block;
+    color: var(--white);
+    font-family: var(--basic);
+    font-size: 3rem;
+    padding-bottom: 3rem;
+}
+
+.planet-meta p{
+    font-family: var(--basic);
+    padding-bottom: 1rem;
+    color: var(--white);
+}
+
+
+/* crew page */
+
+#crew{
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
+    background-size: cover;
+}
+
+.crew-members{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.crew-members>div{
+    max-width: 40%;
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+
+.member-img_{
+    width: 100%;
+    object-fit: contain;
+}
+
+.role{
+    display: block;
+    font-size: 3rem;
+    color: rgb(149, 149, 149);
+    font-family: var(--heading);
+    text-transform: uppercase;
+}
+
+/* crew pages's slide and dots */
+.arrow::after{
+    color: rgb(149, 149, 149);
+}
+
+
+/* technology page */
+#technology{
+    background-image: url("../assets/technology/background-technology-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.technology-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150rem;
+    gap: 2rem;
+}
+
+.tech-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tech-content>*{
+    width: 45%;
+    padding: .5rem;
+}
+
+.tech-content-desc p{
+    width: 90%;
+}
+
+.tech-content-desc>*{
+    padding-bottom: 2rem;
+}
+
+.tech_{
+    display: block;
+    color: var(--light);
+    font-family: var(--basic);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.tech-img_{
+    width: 100%;
+    border-radius: .5rem;
+}
+
+/* tech slide style */
+.tech-list{
+    width: auto !important
+}
+.tech-list.swiper-pagination{
+    position: relative;
+}
+
+.tech-list.tech-list.swiper-pagination span{
+    margin-bottom: 1.5rem;
+}
+
+.tech-list span{
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    /* flex-direction: column; */
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+}
+
+/* contact page */
+
+#contact-us{
+    background-image: url("../assets/shared/milky-way.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+
+.contact-content-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 10vmin 0;
+}
+
+.contact-content-heading{
+    font-family: var(--basic);
+    padding: 3rem 0;
+}
+
+.contact-address{
+    color: var(--light);
+    font-family: var(--heading);
+    font-size: 2.5rem;
+}
+
+.contact-address a{
+    color: var(--light);
+}
+
+/* social links */
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-family: var(--basic);
+}
+
+.social>*{
+    padding-bottom: 2rem;
+}
+
+.social-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-icon{
+    font-size: 2rem;
+}
+
+.youtube .social-icon{
+    color: #FE0000;
+}
+
+.facebook .social-icon{
+    color: #0f74ef;
+}
+
+.twitter .social-icon{
+    color: #4493cb;
+}
+
+/* survey form */
+.survey-form-wrapper{
+    width: 30%;
+}
+
+.survey-header{
+    font-family: var(--basic);
+    text-align: center;
+}
+
+.survey-form-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--basic);
+}
+
+#survey-form  label, #survey-form  input, #survey-form select, #survey-form textarea{
+    border-radius: 1rem;
+    border: none;
+    padding: .5rem;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+#survey-form label{
+    color: var(--light);
+    font-size: 2rem;
+}
+
+#submit{
+    display: inline-block;
+    width: 200px;
+    margin: 2rem auto;
+    padding:1rem;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+    background-color: var(--light);
+    border: none;
+    color: #21516a;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .header-nav{
+        display: none;
+    }
+
+    .dropdown-navbar{
+        position: absolute;
+        top: 8rem;
+        right: 1rem;
+        display: block;
+        width: auto;
+        height: auto;
+        z-index: 10;
+        transition: all 250ms cubic-bezier(.694,0,.335,1);
+    }
+
+    .dropdown-navbar .header-navbar{
+        display:flex;
+        flex-direction: column;
+        font-size: 1.6rem;
+        padding: 3rem;
+        line-height: 4rem;
+    }
+
+    .dropdown-navbar .active::before{
+        display: none;
+    }
+
+       
+    .nav-item a:after{
+        height: .1rem; 
+    }
+
+
+    .dropdown{
+        display: block;
+        cursor: pointer;
+        width: 48px;
+    }
+    .icon{
+        padding: 8px; 
+    }
+    
+    .line{
+        display: block;
+        background-color:  var(--white);
+        width: 32px;
+        height: 2px;
+        margin: 8.7px 0;
+        transition: all .26s ease-in-out;
+    }
+
+    .icon.close .top{
+        transform: rotate(-45deg) translate(-9px,6px);
+    }
+
+    .icon.close .middle{
+        opacity: 0;
+    }
+ 
+    .icon.close .bottom{
+        transform: rotate(45deg) translate(-8px,-8px);;
+    }
+    h1{
+        font-size: 8rem;
+    }
+    
+    h2{
+        font-size: 4rem;
+    }
+    
+    h3{
+        font-size: 3rem;
+    }
+    
+    p{
+        line-height: 3.5rem;
+    }
+
+    #homepage{
+        background-image: url("../assets/home/background-home-tablet.jpg");
+    }
+    .homepage-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #technology{
+        background-image: url("../assets/technology/background-technology-tablet.jpg");
+    }
+    
+    .technology-wrapper{
+        width: auto;
+    }
+
+    .tech-content{
+        flex-direction: column-reverse;
+    }
+
+    .tech-content>*{
+        width: 80%;
+    }
+
+    .tech-img_{
+        height: 40rem;
+        object-fit: cover;
+    }
+
+    #destination{
+        background-image: url("../assets/destination/background-destination-tablet.jpg");
+    }   
+
+    
+    .destination-name{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .planet-meta{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .destination-list{
+        left: calc(50% - 160px);
+    }
+
+    div.destination-description{
+        width: 60%;
+    }
+
+    #crew{
+        background-image: url("../assets/crew/background-crew-tablet.jpg");
+    }
+
+    .crew-members{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .crew-members>div{
+        max-width: 80%;
+    }
+
+    .member-info{
+        gap: 2rem;
+    }
+}
